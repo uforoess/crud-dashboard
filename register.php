@@ -60,7 +60,7 @@ session_start();
 
     #box{
 
-        background-color:lightseagreen;
+        background-color: MediumSeaGreen;
         margin: auto;
         width: 500px;
         padding: 20px;

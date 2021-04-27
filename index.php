@@ -12,6 +12,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
+<br><h3 style="text-align: center;">Begin the semester by registering your courses on the Students Dashboard.</h3><br><br><br>
     <?php require_once 'process.php'; ?>
 
     <?php
@@ -26,6 +27,33 @@
         ?>
     </div>
     <?php endif ?>
+
+    <div class="row justify-content-center"> 
+    <form action="process.php" method="POST">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
+        <div class="form-group">
+        <label>Course</label>
+        <input type="text" name="courses" class="form-control" 
+            value="<?php echo $courses; ?>" placeholder=" Enter your course">
+               
+        </div>
+        <div class="form-group">
+        <label>Credit Unit</label>
+        <input type="number" name="credit_unit" 
+        value="<?php echo $credit_unit; ?>" class="form-control" placeholder=" Enter your credit unit">
+        </div>
+        <div class="form-group">
+        <?php
+        if ($update==true):
+        ?>
+            <button type="submit" class="btn btn-info" name="update">Update</button>
+        <?php else: ?>
+        <button type="submit" class="btn btn-primary" name="save">Save</button>
+        <?php endif; ?>
+        </div>
+    </form>
+    </div>
+            <br><br><br>
 
     <div class="container">
     <?php
@@ -73,33 +101,13 @@
             }
     ?>
 
-    <div class="row justify-content-center"> 
-    <form action="process.php" method="POST">
-            <input type="hidden" name="id" value="<?php echo $id; ?>">
-        <div class="form-group">
-        <label>Course</label>
-        <input type="text" name="courses" class="form-control" 
-            value="<?php echo $courses; ?>" placeholder=" Enter your course">
-               
+        <div>
+<br><br><a href="logout.php"><h5 style="color:red;font-size:20px;text-align: center; ">Log Out</h3></a></h5><br>
+
         </div>
-        <div class="form-group">
-        <label>Credit Unit</label>
-        <input type="number" name="credit_unit" 
-        value="<?php echo $credit_unit; ?>" class="form-control" placeholder=" Enter your credit unit">
-        </div>
-        <div class="form-group">
-        <?php
-        if ($update==true):
-        ?>
-            <button type="submit" class="btn btn-info" name="update">Update</button>
-        <?php else: ?>
-        <button type="submit" class="btn btn-primary" name="save">Save</button>
-        <?php endif; ?>
-        </div>
-    </form>
+
+       <div>     
+<a href="forgotpassword.php"><h5 style="color:red;font-size:20px;text-align: center; ">Reset Password</h5></a></h5> 
     </div>
-            
-    <h5>Begin the semester by registering your courses on the Student Dashboard.<br><br> 
-<a href="logout.php"><h3 style="color:red;font-size:x-large;text-align: center; ">Log Out</h3></a></h5> 
-    </div>
+
 </body>

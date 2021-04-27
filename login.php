@@ -78,7 +78,7 @@ session_start();
 
     #box{
 
-        background-color: lightseagreen;
+        background-color: MediumSeaGreen;
         margin: auto;
         width: 500px;
         padding: 20px;
@@ -98,7 +98,7 @@ session_start();
             <input id="button" type= "submit" value="Login"><br><br>
 
             <a href="register.php" style="color: white;">Not a member? Register now.</a><br>
-            <a href="forgotpassword.php" style="color: white;">Forgot password</a>
+            
 
             
 
